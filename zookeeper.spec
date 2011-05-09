@@ -4,7 +4,7 @@
 
 Summary:	Zookeeper C client library
 Name:		zookeeper
-Version:	3.2.1
+Version:	3.3.3
 Release:	%mkrel 1
 License:	Apache License
 Group:		System/Libraries
