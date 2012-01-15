@@ -4,19 +4,18 @@
 
 Summary:	Zookeeper C client library
 Name:		zookeeper
-Version:	3.3.3
-Release:	%mkrel 1
+Version:	3.4.2
+Release:	1
 License:	Apache License
 Group:		System/Libraries
 URL:		http://hadoop.apache.org/zookeeper
 Source0:	http://apache.dataphone.se/hadoop/zookeeper/%{name}-%{version}/%{name}-%{version}.tar.gz
 Source1:	http://apache.dataphone.se/hadoop/zookeeper/%{name}-%{version}/%{name}-%{version}.tar.gz.asc
+BuildRequires:	autoconf automake libtool
 BuildRequires:	cppunit-devel >= 1.10.2
 BuildRequires:	dos2unix
 BuildRequires:	doxygen
 BuildRequires:	graphviz
-BuildRequires:	libtool
-BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
 
 %description
 This package provides a C client interface to Zookeeper server. For general
@@ -72,33 +71,20 @@ pushd src/c
 rm -f docs/html/*.map
 popd
 
-%if %mdkversion < 200900
-%post -n %{libname} -p /sbin/ldconfig
-%endif
-
-%if %mdkversion < 200900
-%postun -n %{libname} -p /sbin/ldconfig
-%endif
-
-%clean
-rm -rf %{buildroot}
+# cleanup
+rm -f %{buildroot}%{_libdir}/*.*a
 
 %files
-%defattr(-,root,root)
 %{_bindir}/cli_mt
 %{_bindir}/cli_st
 %{_bindir}/load_gen
 
 %files -n %{libname}
-%defattr(-,root,root)
 %doc src/c/ChangeLog src/c/LICENSE src/c/README
 %{_libdir}/lib*.so.%{major}*
 
 %files -n %{develname}
-%defattr(-,root,root)
 %doc src/c/docs/html/*
-%dir %{_includedir}/c-client-src
-%{_includedir}/c-client-src/*.h
+%dir %{_includedir}/zookeeper
+%{_includedir}/zookeeper/*.h
 %{_libdir}/*.so
-%{_libdir}/*.*a
-
