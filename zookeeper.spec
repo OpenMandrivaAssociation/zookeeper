@@ -88,3 +88,26 @@ rm -f %{buildroot}%{_libdir}/*.*a
 %dir %{_includedir}/zookeeper
 %{_includedir}/zookeeper/*.h
 %{_libdir}/*.so
+
+
+%changelog
+* Sun Jan 15 2012 Oden Eriksson <oeriksson@mandriva.com> 3.4.2-1
++ Revision: 761289
+- 3.4.2
+- 3.3.3
+
+* Sat Oct 17 2009 Oden Eriksson <oeriksson@mandriva.com> 3.2.1-1mdv2010.0
++ Revision: 458005
+- import zookeeper
+
+
+* Sat Oct 17 2009 Oden Eriksson <oeriksson@mandriva.com> 3.2.1-1mdv2009.1
+- 3.2.1
+- the package was renamed to just zookeeper (someone should package the java bits...)
+
+* Sat May 03 2008 Oden Eriksson <oeriksson@mandriva.com> 2.1.0-1mdv2009.0
++ Revision: 200092
+- import zookeeper-c
+
+* Sat May 03 2008 Oden Eriksson <oeriksson@mandriva.com> 2.1.0-1mdv2009.0
+- initial Mandriva package
