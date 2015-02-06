@@ -5,7 +5,7 @@
 Summary:	Zookeeper C client library
 Name:		zookeeper
 Version:	3.4.2
-Release:	1
+Release:	2
 License:	Apache License
 Group:		System/Libraries
 URL:		http://hadoop.apache.org/zookeeper
