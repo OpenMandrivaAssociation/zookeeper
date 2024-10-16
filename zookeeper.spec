@@ -8,7 +8,7 @@ Version:	3.4.2
 Release:	2
 License:	Apache License
 Group:		System/Libraries
-URL:		http://hadoop.apache.org/zookeeper
+URL:		https://hadoop.apache.org/zookeeper
 Source0:	http://apache.dataphone.se/hadoop/zookeeper/%{name}-%{version}/%{name}-%{version}.tar.gz
 Source1:	http://apache.dataphone.se/hadoop/zookeeper/%{name}-%{version}/%{name}-%{version}.tar.gz.asc
 BuildRequires:	autoconf automake libtool
