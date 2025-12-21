@@ -11,6 +11,8 @@ Group:		System/Libraries
 URL:		https://hadoop.apache.org/zookeeper
 Source0:	http://apache.dataphone.se/hadoop/zookeeper/%{name}-%{version}/%{name}-%{version}.tar.gz
 Source1:	http://apache.dataphone.se/hadoop/zookeeper/%{name}-%{version}/%{name}-%{version}.tar.gz.asc
+BuildRequires:	libtool-base
+BuildRequires:	slibtool
 BuildRequires:	autoconf automake libtool
 BuildRequires:	cppunit-devel >= 1.10.2
 BuildRequires:	dos2unix
